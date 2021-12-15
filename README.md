@@ -1,0 +1,2 @@
+# teamviewer
+remove o teamviewer
