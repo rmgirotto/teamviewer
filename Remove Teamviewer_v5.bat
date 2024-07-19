@@ -2,6 +2,9 @@
 title REMOVE SUPORTE v2
 mode con:cols=65 lines=10
 SET versao=2.0.7
+set tempo3=timeout 3
+set tempo5=timeout 5
+set tempo10=timeout 10
 
 echo.
 echo.
@@ -11,7 +14,7 @@ echo.
 @echo    º                     DESINSTALACAO...                    º
 @echo    º                                                   v%versao%º
 @echo    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-timeout /t 3 >nul
+%tempo3%
 cls
 
 echo.
@@ -22,7 +25,7 @@ echo.
 @echo    º                A LIMPEZA DO COMPUTADOR!!                º
 @echo    º                                                         º
 @echo    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-timeout /t 10 >nul
+%tempo10%
 cls
 
 @echo off
@@ -34,7 +37,7 @@ echo.
 @echo    º                                                         º
 @echo    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 NET STOP teamviewer >nul 2>&1
-timeout /t 3 >nul
+%tempo3%
 cls
 
 echo.
@@ -47,7 +50,7 @@ echo.
 sc delete teamviewer >nul 2>&1
 sc delete teamviewer6 >nul 2>&1
 sc delete teamviewer9 >nul 2>&1
-timeout /t 3 >nul
+%tempo3%
 cls
 
 echo.
@@ -147,7 +150,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninsta
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\TeamViewer 6" /f >nul 2>&1
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\TeamViewer 9" /f >nul 2>&1
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\TeamViewer 9" /f >nul 2>&1
-timeout /t 5 >nul >nul
+%tempo5%
 cls
 
 
@@ -157,7 +160,7 @@ echo.
 @echo    º                        OBRIGADO                         º
 @echo    º                                                         º
 @echo    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-timeout /t 5 >nul
+%tempo5%
 cls
 
 echo.
@@ -170,5 +173,5 @@ echo    º                2013 (c) All rights reserved             º
 @echo    º                                                         º
 echo    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 echo.
-timeout /t 5 >nul
+%tempo5%
 exit
